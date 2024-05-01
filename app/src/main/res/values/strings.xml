@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">kotlin-challenges</string>
+    <string name="login_title">Welcome</string>
+    <string name="login_text">Bienvenidx a mi primera aplicación para Android</string>
+    <string name="login_text_email">Email address</string>
+    <string name="login_text_password">Password</string>
+    <string name="login_btn_login">Login</string>
 </resources>

@@ -1,10 +1,11 @@
-package diego.dev.ort.tp3.kotlin_challenges
+package diego.dev.ort.tp3.kotlin_challenges.activities
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import diego.dev.ort.tp3.kotlin_challenges.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
