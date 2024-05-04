@@ -16,6 +16,10 @@
         <action
             android:id="@+id/action_profileFragment_to_masDatosFragment2"
             app:destination="@id/masDatosFragment" />
+        <argument
+            android:name="unTexto"
+            app:argType="string"
+            android:defaultValue=""/>
     </fragment>
     <fragment
         android:id="@+id/masDatosFragment"
