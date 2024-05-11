@@ -29,5 +29,13 @@
         <action
             android:id="@+id/action_masDatosFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_masDatosFragment_to_contactosFragment"
+            app:destination="@id/contactosFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/contactosFragment"
+        android:name="diego.dev.ort.tp3.kotlin_challenges.fragments.ContactosFragment"
+        android:label="fragment_contactos"
+        tools:layout="@layout/fragment_contactos" />
 </navigation>
