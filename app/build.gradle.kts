@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinAndroid)
 
     //a mano
+    //NECESARIO PARA QUE SE GENERE CÓDIGO CANDO TIRO FLECHITAS EN UN NAV
     id("androidx.navigation.safeargs.kotlin")
 
 }
