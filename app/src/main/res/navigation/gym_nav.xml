@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gym_nav"
+    app:startDestination="@id/gymAlertsFragment">
+
+    <fragment
+        android:id="@+id/gymAlertsFragment"
+        android:name="diego.dev.ort.tp3.kotlin_challenges.fragments.GymAlertsFragment"
+        android:label="fragment_gym_alerts"
+        tools:layout="@layout/fragment_gym_alerts" />
+    <fragment
+        android:id="@+id/gymProfileFragment"
+        android:name="diego.dev.ort.tp3.kotlin_challenges.fragments.GymProfileFragment"
+        android:label="fragment_gym_profile"
+        tools:layout="@layout/fragment_gym_profile" />
+    <fragment
+        android:id="@+id/gymHomeFragment"
+        android:name="diego.dev.ort.tp3.kotlin_challenges.fragments.GymHomeFragment"
+        android:label="fragment_gym_home"
+        tools:layout="@layout/fragment_gym_home" />
+</navigation>
