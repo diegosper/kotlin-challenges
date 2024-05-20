@@ -10,6 +10,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.navigation.findNavController
 import diego.dev.ort.tp3.kotlin_challenges.R
+import diego.dev.ort.tp3.kotlin_challenges.activities.GymActivity
 import diego.dev.ort.tp3.kotlin_challenges.activities.MainActivity
 import diego.dev.ort.tp3.kotlin_challenges.activities.SuperheroesActivity
 import diego.dev.ort.tp3.kotlin_challenges.activities.btn_login
@@ -21,6 +22,7 @@ class MasDatosFragment : Fragment() {
     lateinit var viewMasDatos: View
     lateinit var btnProfile: Button
     lateinit var btnContactos : Button
+    lateinit var btnGym : Button
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,6 +34,7 @@ class MasDatosFragment : Fragment() {
         viewMasDatos = inflater.inflate(R.layout.fragment_mas_datos, container, false)
         btnProfile = viewMasDatos.findViewById(R.id.mas_datos_btn_profile)
         btnContactos = viewMasDatos.findViewById(R.id.btn_contactos)
+        btnGym = viewMasDatos.findViewById(R.id.btn_gym)
 
         btnProfile.setOnClickListener {
             val actionToProfile =
@@ -54,6 +57,11 @@ class MasDatosFragment : Fragment() {
                 MasDatosFragmentDirections.actionMasDatosFragmentToContactosFragment()
 
             viewMasDatos.findNavController().navigate(actionToContactos)
+        }
+
+        btnGym.setOnClickListener(){
+                val intent = Intent(viewMasDatos.context, GymActivity::class.java)
+                startActivity(intent)
         }
 
 
