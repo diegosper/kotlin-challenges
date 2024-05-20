@@ -2,7 +2,7 @@ package diego.dev.ort.tp3.kotlin_challenges.entities
 
 import android.os.Parcel
 
-class Superheroe(nombre: String?){
+class Pokemon(nombre: String?){
 
     var nombre : String
 

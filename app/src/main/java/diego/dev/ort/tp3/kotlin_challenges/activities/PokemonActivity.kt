@@ -7,7 +7,6 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.Recycler
 import diego.dev.ort.tp3.kotlin_challenges.R
 
 lateinit var recSuperheroes : RecyclerView
@@ -15,7 +14,7 @@ class SuperheroesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_superheroes)
+        setContentView(R.layout.activity_pokemones)
 
         recSuperheroes = this.findViewById(R.id.rec_superheroes)
 

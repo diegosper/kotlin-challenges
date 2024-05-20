@@ -37,7 +37,7 @@
             android:textColor="@android:color/holo_blue_bright" />
 
         <TextView
-            android:id="@+id/txt_superheroes"
+            android:id="@+id/txt_pokemones"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/mas_datos_superheroes2" />

@@ -5,7 +5,7 @@
     <string name="login_text_email">Email address</string>
     <string name="login_text_password">Password</string>
     <string name="login_btn_login">Login</string>
-    <string name="mas_datos_superheroes1">Click aquí</string>
-    <string name="mas_datos_superheroes2"> si quieres ver a los superheroes</string>
+    <string name="mas_datos_pokemones1">Click aquí</string>
+    <string name="mas_datos_pokemones2"> si quieres ver a los pokemones</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
