@@ -8,28 +8,31 @@
     tools:context=".activities.GymActivity">
 
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/gym_nav_host"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:navGraph="@navigation/gym_nav" />
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/btm_nav_gym"
         android:layout_width="409dp"
         android:layout_height="0dp"
+        app:itemTextColor="#E80E0E"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline5"
-        app:layout_constraintVertical_bias="1.0"
-        app:menu="@menu/gym_btm_menu" />
+        app:layout_constraintVertical_bias="0.0"
+        app:menu="@menu/gym_btm_menu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/gym_nav_host"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btm_nav_gym"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/gym_nav" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline5"

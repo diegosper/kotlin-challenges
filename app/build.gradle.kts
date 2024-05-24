@@ -57,6 +57,10 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson")
     implementation("com.squareup.retrofit2:converter-gson:2.11.0")
 
+    //GLIDE para imagenes
+    val glide_version = "4.16.0"
+    implementation("com.github.bumptech.glide:glide:${glide_version}")
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
