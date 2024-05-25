@@ -1,7 +1,7 @@
 package diego.dev.ort.tp3.kotlin_challenges.service
 
 import diego.dev.ort.tp3.kotlin_challenges.model.PaginateResponse
-import diego.dev.ort.tp3.kotlin_challenges.model.Pokemon
+import diego.dev.ort.tp3.kotlin_challenges.entities.Pokemon
 import retrofit2.Call
 import retrofit2.http.GET
 

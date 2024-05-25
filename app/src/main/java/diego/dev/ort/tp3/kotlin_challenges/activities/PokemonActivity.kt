@@ -1,28 +1,27 @@
 package diego.dev.ort.tp3.kotlin_challenges.activities
 
 import android.os.Bundle
-import android.util.Log
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.customview.widget.ViewDragHelper.Callback
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.gson.Gson
+import com.bumptech.glide.Glide
 import diego.dev.ort.tp3.kotlin_challenges.R
 import diego.dev.ort.tp3.kotlin_challenges.model.PaginateResponse
-import diego.dev.ort.tp3.kotlin_challenges.model.Pokemon
 import diego.dev.ort.tp3.kotlin_challenges.service.ActivityServiceApiBuilder
-import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Response
-import kotlin.math.log
+import diego.dev.ort.tp3.kotlin_challenges.entities.Pokemon
 
 lateinit var txtPokemon1 : TextView
 lateinit var txtPokemon2 : TextView
+lateinit var imgPokemon: ImageView
 lateinit var recPokemones : RecyclerView
+var listaPokemones: MutableList<Pokemon> = ArrayList()
+
+private var pokemones : MutableList<Pokemon> = ArrayList()
 class SuperheroesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,9 +30,12 @@ class SuperheroesActivity : AppCompatActivity() {
 
         txtPokemon1 = this.findViewById(R.id.txt1)
         txtPokemon2 = this.findViewById(R.id.txt2)
+        imgPokemon = this.findViewById(R.id.img_pokemon)
         recPokemones = this.findViewById(R.id.rec_pokemones)
 
-        cargarPokemones()
+        //cargarPokemones()
+        cargarPokemonsHard(listaPokemones)
+
 
 
 
@@ -51,7 +53,13 @@ class SuperheroesActivity : AppCompatActivity() {
         //Como parámetro le tengo que pasar el contexto (de fragmento o activity)
         //El contecto sería "el padre" que lo contiene. Puede ser similar a decir "activity", pero no en todos los casos.
         val linearLayoutManager = LinearLayoutManager(this )
+        //SI NO LO DEFINO, ES HORIZONTAL
         recPokemones.layoutManager = linearLayoutManager
+        txtPokemon1.text = listaPokemones.get(2).name
+        txtPokemon2.text = listaPokemones.get(2).weight.toString()
+        val imgUrl = listaPokemones.get(2).picture
+        Glide.with(this).load(imgUrl).into(imgPokemon)
+
 
         
     }
@@ -77,5 +85,19 @@ class SuperheroesActivity : AppCompatActivity() {
 
 
         })
+    }
+
+    fun cargarPokemonsHard(listaPokemones: MutableList<Pokemon>){
+        for(i in 1..9){
+
+            val pokemon = Pokemon(
+                i,
+                "Ricardito",
+                30,
+                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${i}.png"
+            )
+
+            listaPokemones.add(pokemon)
+        }
     }
 }
